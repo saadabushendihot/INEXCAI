@@ -50,6 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // إضافة أو إزالة حالة active للروابط عند التمرير
+    // تأكد من أن جميع IDs للأقسام التي في الروابط موجودة في هذه القائمة
     const sections = document.querySelectorAll('section, header'); // كل الأقسام بما في ذلك الhero
     const observerOptions = {
         root: null,
@@ -76,7 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // تحديد الرابط النشط عند تحميل الصفحة لأول مرة (للحالة التي يكون فيها المستخدم في منتصف الصفحة)
-    // يمكن تحسينه للتعامل مع الروابط # في URL
     const currentPath = window.location.hash.substring(1); // احصل على الهاش بدون #
     if (currentPath) {
         navItems.forEach(link => {
