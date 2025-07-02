@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // إضافة أو إزالة حالة active للرروابط عند التمرير
+    // إضافة أو إزالة حالة active للروابط عند التمرير
     const sections = document.querySelectorAll('section, header'); // كل الأقسام بما في ذلك الhero
     const observerOptions = {
         root: null,
