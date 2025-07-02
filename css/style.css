@@ -8,6 +8,7 @@
     --light-bg: #f8f9fa;
     --dark-bg: #212529;
     --white-bg: #ffffff;
+    --navbar-dark-bg: #343a40; /* لون خلفية شريط التنقل الجديد (رمادي داكن) */
     --border-color: #e9ecef;
     --heading-font: 'Poppins', sans-serif; /* عصري وحديث */
     --body-font: 'Tajawal', sans-serif; /* يدعم العربية بشكل ممتاز */
@@ -136,7 +137,7 @@ body {
 
 /* شريط التنقل (Navigation Bar) */
 .navbar {
-    background-color: var(--white-bg);
+    background-color: var(--navbar-dark-bg); /* تم تغيير اللون هنا */
     padding: 18px 0;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     position: fixed;
@@ -171,7 +172,7 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--white-bg); /* تم تغيير لون النص هنا ليكون أبيض */
     font-weight: 500; /* خط أرق قليلاً */
     font-size: 1.15em;
     position: relative;
@@ -213,7 +214,7 @@ body {
     display: block;
     width: 30px;
     height: 3px;
-    background-color: var(--text-color);
+    background-color: var(--white-bg); /* تم تغيير لون خطوط زر القائمة هنا */
     margin: 6px 0;
     transition: all 0.3s ease;
 }
@@ -642,7 +643,7 @@ body {
         display: none; /* إخفاء قائمة التنقل افتراضياً في الجوال */
         width: 100%;
         flex-direction: column;
-        background-color: var(--white-bg);
+        background-color: var(--navbar-dark-bg); /* تم تغيير اللون هنا أيضاً */
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
         padding: 10px 0;
         margin-top: 10px;
@@ -664,7 +665,7 @@ body {
     .nav-links a {
         padding: 15px 0;
         display: block;
-        border-bottom: 1px solid var(--border-color);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* لون أبيض شفاف للحدود */
     }
 
     .nav-links li:last-child a {
