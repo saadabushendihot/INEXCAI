@@ -3,6 +3,7 @@
     --primary-color: #007bff; /* أزرق Inexc أو لون علامتك التجارية */
     --secondary-color: #6c757d; /* رمادي */
     --accent-color: #28a745; /* لون ثانوي (أخضر للمراجع أو الزرار) */
+    --whatsapp-color: #25d366; /* لون واتساب الأخضر */
     --text-color: #333;
     --light-bg: #f8f9fa;
     --dark-bg: #212529;
@@ -110,6 +111,27 @@ body {
 
 .btn-secondary:hover {
     background-color: #5a6268;
+}
+
+/* زر واتساب خاص */
+.whatsapp-btn {
+    background-color: var(--whatsapp-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* مسافة بين الأيقونة والنص */
+    margin-top: 20px; /* مسافة عن الفقرة التي تسبقه */
+    max-width: fit-content; /* يجعل الزر بحجم المحتوى */
+    margin-left: auto; /* لليمين في RTL */
+    margin-right: auto; /* لليمين في RTL */
+}
+
+.whatsapp-btn:hover {
+    background-color: #20b85a; /* لون أغمق عند التحويم */
+}
+
+.whatsapp-btn i {
+    font-size: 1.2em; /* حجم أيقونة الواتساب داخل الزر */
 }
 
 /* شريط التنقل (Navigation Bar) */
@@ -269,7 +291,7 @@ body {
     padding: 35px;
     flex: 1;
     min-width: 300px;
-    max-width: 380px;
+    max-width: 48%; /* Adjust for 2 columns on larger screens */
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); /* ظل أعمق */
     text-align: right;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -411,6 +433,11 @@ body {
     font-weight: 600;
 }
 
+/* فقرة إضافية للهامش العلوي */
+.mt-5 {
+    margin-top: 3rem !important; /* 3rem = 48px */
+}
+
 /* قسم انضم إلينا (Join Us) */
 .join-options {
     display: flex;
@@ -544,10 +571,19 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* تنسيق أيقونة الواتساب في روابط التواصل الاجتماعي */
+.social-links a.whatsapp-icon-link {
+    background-color: var(--whatsapp-color);
+}
+
 .social-links a:hover {
     background-color: var(--accent-color); /* لون مختلف عند التحويم */
     transform: translateY(-5px) rotate(5deg);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.social-links a.whatsapp-icon-link:hover {
+    background-color: #20b85a; /* لون أغمق لواتساب عند التحويم */
 }
 
 /* تذييل الصفحة (Footer) */
@@ -690,5 +726,8 @@ body {
     }
     .hero-content h1 {
         font-size: 3.8em;
+    }
+    .mission-vision-values .card {
+        max-width: 100%; /* Full width on tablets */
     }
 }
