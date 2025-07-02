@@ -114,26 +114,31 @@ body {
     background-color: #5a6268;
 }
 
-/* زر واتساب خاص */
-.whatsapp-btn {
+/* زر واتساب كبير وبارز للقسم الجديد */
+.btn-whatsapp-large {
     background-color: var(--whatsapp-color);
-    display: flex;
+    color: #fff;
+    padding: 18px 40px; /* حجم كبير جداً */
+    font-size: 1.5em; /* حجم خط كبير */
+    border-radius: 10px; /* حواف أكثر استدارة */
+    display: inline-flex; /* لجعل الأيقونة والنص في سطر واحد */
     align-items: center;
-    justify-content: center;
-    gap: 10px; /* مسافة بين الأيقونة والنص */
-    margin-top: 20px; /* مسافة عن الفقرة التي تسبقه */
-    max-width: fit-content; /* يجعل الزر بحجم المحتوى */
-    margin-left: auto; /* لليمين في RTL */
-    margin-right: auto; /* لليمين في RTL */
+    gap: 15px; /* مسافة بين الأيقونة والنص */
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4); /* ظل أخضر مميز */
+    transition: all 0.3s ease;
+    text-decoration: none; /* إزالة الخط السفلي */
 }
 
-.whatsapp-btn:hover {
-    background-color: #20b85a; /* لون أغمق عند التحويم */
+.btn-whatsapp-large:hover {
+    background-color: #1da84d; /* لون أغمق عند التحويم */
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(37, 211, 102, 0.6);
 }
 
-.whatsapp-btn i {
-    font-size: 1.2em; /* حجم أيقونة الواتساب داخل الزر */
+.btn-whatsapp-large i {
+    font-size: 1.5em; /* حجم أيقونة الواتساب داخل الزر */
 }
+
 
 /* شريط التنقل (Navigation Bar) */
 .navbar {
@@ -499,7 +504,45 @@ body {
     color: #0056b3;
 }
 
+/* قسم الانضمام لمجموعة واتساب (New WhatsApp Group Section) */
+.whatsapp-group-section {
+    background-color: #e6ffee; /* خلفية فاتحة جذابة لتمييز القسم */
+    padding: 100px 0;
+    border-top: 5px solid var(--whatsapp-color); /* خط علوي بلون الواتساب */
+    border-bottom: 5px solid var(--whatsapp-color); /* خط سفلي بلون الواتساب */
+    text-align: center;
+    margin-bottom: 0; /* لضمان عدم وجود فجوة إذا كان يليه قسم آخر */
+}
+
+.whatsapp-group-section h2 {
+    color: var(--whatsapp-color); /* عنوان بلون الواتساب */
+    font-size: 3.2em; /* حجم أكبر */
+    margin-bottom: 30px;
+}
+
+.whatsapp-group-section h2::after { /* إلغاء خط التزيين إذا كنت تفضل مظهراً أنظف هنا */
+    content: none;
+}
+
+.whatsapp-group-section p {
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    font-size: 1.3em; /* نص أكبر وأوضح */
+    color: #444;
+}
+
+.whatsapp-group-section .small-text {
+    font-size: 1.05em;
+    color: #666;
+    margin-top: 20px;
+}
+
+
 /* قسم تواصل معنا (Contact Us) */
+.contact-section { /* تم تعديل هذا ليكون له خلفية فاتحة بعد إضافة قسم الواتساب */
+    background-color: var(--light-bg);
+}
+
 .contact-info-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -572,19 +615,11 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* تنسيق أيقونة الواتساب في روابط التواصل الاجتماعي */
-.social-links a.whatsapp-icon-link {
-    background-color: var(--whatsapp-color);
-}
-
+/* تم إزالة تنسيق أيقونة الواتساب من هنا لأنها لم تعد موجودة في هذا القسم */
 .social-links a:hover {
     background-color: var(--accent-color); /* لون مختلف عند التحويم */
     transform: translateY(-5px) rotate(5deg);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
-
-.social-links a.whatsapp-icon-link:hover {
-    background-color: #20b85a; /* لون أغمق لواتساب عند التحويم */
 }
 
 /* تذييل الصفحة (Footer) */
@@ -691,6 +726,21 @@ body {
     .section h2 {
         font-size: 2.5em;
     }
+
+    .whatsapp-group-section h2 {
+        font-size: 2.5em;
+    }
+    .whatsapp-group-section p {
+        font-size: 1.1em;
+    }
+    .btn-whatsapp-large {
+        padding: 15px 25px;
+        font-size: 1.2em;
+    }
+    .btn-whatsapp-large i {
+        font-size: 1.2em;
+    }
+
 
     .mission-vision-values .card,
     .service-item,
